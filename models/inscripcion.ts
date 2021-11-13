@@ -4,7 +4,7 @@ import { ProjectModel } from './project';
 import { UserModel } from './user';
 
 interface Inscription {
-  estado: Enum_EstadoInscripcion,;
+  estado: Enum_EstadoInscripcion,
   fechaIngreso: Date;
   fechaEgreso: Date;
   proyecto: Schema.Types.ObjectId;
@@ -14,7 +14,7 @@ interface Inscription {
 const inscriptionSchema = new Schema<Inscription>({
   estado: {
     type: String,
-    enum: Enum_EstadoInscripcion,,
+    enum: Enum_EstadoInscripcion,
     required: true,
   },
   fechaIngreso: {
