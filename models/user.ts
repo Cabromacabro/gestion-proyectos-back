@@ -16,8 +16,8 @@ const userSchema = new Schema<User>({
     required: true,
     unique: true,
     validate: {
-      validator: (email) => {
-        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+      validator: (correo) => {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(correo);
       },
       // (email) => {
       //   if (email.includes('@') && email.includes('.')) {
@@ -50,7 +50,7 @@ const userSchema = new Schema<User>({
   estado: {
     type: String,
     enum: Enum_EstadoUsuario,
-    default: Enum_EstadoUsuario.pendiente,
+    default: Enum_EstadoUsuario.PENDIENTE,
   },
 });
 
